@@ -1,0 +1,27 @@
+pm_tp_home:
+    path: /{page} 
+    defaults: { _controller: PMTPBundle:Default:index, page: 1 }
+    requirements:
+        page: \d*
+
+pm_tp_view:
+    path: /article/{id}
+    defaults: { _controller: PMTPBundle:Default:view }
+    requirements:
+        id: \d+
+
+pm_tp_add:
+    path: /add
+    defaults: { _controller: PMTPBundle:Default:add }	
+
+pm_tp_edit:
+    path: /edit/{id}
+    defaults: { _controller: PMTPBundle:Default:edit }	
+    requirements:
+        id: \d+
+
+pm_tp_delete:
+    path: /delete/{id}
+    defaults: { _controller: PMTPBundle:Default:delete }	
+    requirements:
+        id: \d+

@@ -1,0 +1,7 @@
+pmtp:
+    resource: "@PMTPBundle/Resources/config/routing.yml"
+    prefix:   /tpweb
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

@@ -1,0 +1,24 @@
+{% extends "PMTPBundle::base.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block pmtp_body %}
+
+  <h2>Liste des articles</h2>
+ 	
+  <ul class="list-group">
+    {% for article in listArticles %}
+      <li class="list-group-item" style="background-color: #eee">
+        <a href="{{ path('pm_tp_view', {'id': article.id}) }}">
+          {{ article.title }}
+        </a>
+        par {{ article.author }},
+        le {{ article.date|date('d/m/Y') }}
+      </li>
+    {% else %}
+      <li class="list-group-item" style="background-color: #eee">Pas (encore !) d'annonces</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

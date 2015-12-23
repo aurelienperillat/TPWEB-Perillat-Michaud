@@ -1,0 +1,34 @@
+{% extends "PMTPBundle::base.html.twig" %}
+
+{% block title %}
+  Lecture d'une article - {{ parent() }}
+{% endblock %}
+
+{% block pmtp_body %}
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">{{ article.title }}</h2>
+    </div>
+   
+   <div class="panel-body">{{ article.content }}</div>
+
+   <div class="panel-footer">Par {{ article.author }}, le {{ article.date|date('d/m/Y') }}</div>
+  </div>
+  
+  <p>
+    <a href="{{ path('pm_tp_home') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à l'accueil
+    </a>
+    <a href="{{ path('pm_tp_edit', {'id': article.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-edit"></i>
+      Modifier l'article
+    </a>
+    <a href="{{ path('pm_tp_delete', {'id': article.id}) }}" class="btn btn-danger">
+      <i class="glyphicon glyphicon-trash"></i>
+      Supprimer l'article
+    </a>
+  </p>
+
+{% endblock %}

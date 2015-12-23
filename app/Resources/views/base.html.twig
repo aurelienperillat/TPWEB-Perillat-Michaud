@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% block title %}Web 4A{% endblock %}</title>
+
+  {% block stylesheets %}
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  {% endblock %}
+</head>
+
+<body>
+  <div class="container">
+    <div id="header" class="jumbotron">
+      <h1>Projet web 4A</h1>
+	  <p>Développé par: Aurélien Perillat et Nicolas Michaud</p>
+    </div>
+
+    <div class="row">
+      <div id="menu" class="col-sm-3">
+        <h2>Menu</h2>
+        <ul class="list-group">
+          <li class="list-group-item" style="background-color: #eee"><a href="{{ path('pm_tp_home') }}">Accueil</a></li>
+          <li class="list-group-item" style="background-color: #eee"><a href="{{ path('pm_tp_add') }}">Ajouter un article</a></li>
+        </ul>
+        
+      </div>
+      <div id="content" class="col-sm-9">
+        {% block body %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+
+  {% block javascripts %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  {% endblock %}
+
+</body>
+</html>

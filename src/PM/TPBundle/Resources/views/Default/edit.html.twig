@@ -1,0 +1,25 @@
+{% extends "PMTPBundle::base.html.twig" %}
+
+{% block title %}
+  Modifier une article - {{ parent() }}
+{% endblock %}
+
+{% block pmtp_body %}
+
+  <h2>Modifier une article</h2>
+
+  {{ include("PMTPBundle:Default:form.html.twig") }}
+
+  <p>
+    Vous éditez une annonce déjà existante, merci de ne pas changer
+    l'esprit générale de l'annonce déjà publiée.
+  </p>
+
+  <p>
+    <a href="{{ path('pm_tp_view', {'id': id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à l'article
+    </a>
+  </p>
+
+{% endblock %}
