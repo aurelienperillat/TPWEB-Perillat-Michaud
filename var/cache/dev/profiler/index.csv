@@ -89,3 +89,5 @@ aacb0b,::1,GET,http://localhost/ProjetWeb/web/app_dev.php/tpweb/article/3,145090
 6e1442,::1,GET,http://localhost/ProjetWeb/web/app_dev.php/tpweb,1450903600,,200
 46776e,::1,GET,http://localhost/ProjetWeb/web/app_dev.php/tpweb/article/2,1450903631,,200
 12052f,::1,GET,http://localhost/ProjetWeb/web/app_dev.php/tpweb/edit/2,1450903634,,200
+174fb6,::1,GET,http://localhost/ProjetWeb/web/app_dev.php/tpweb,1450908212,,200
+b9fc4e,::1,GET,http://localhost/ProjetWeb/web/app_dev.php/tpweb/article/3,1450908226,,200
